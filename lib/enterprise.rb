@@ -1,4 +1,5 @@
 require './enterprise/starship.rb'
+require './enterprise/interactions.rb'
 
 
 class ShipChooser
@@ -31,8 +32,34 @@ class ShipChooser
   end
 end
 
+#
+# needs_ship = ShipChooser.new
+# needs_ship.choose_ship_group
+# needs_ship.choose_ship_class
+# needs_ship.commission_construction
 
-needs_ship = ShipChooser.new
-needs_ship.choose_ship_group
-needs_ship.choose_ship_class
-needs_ship.commission_construction
+class InteractivePrompt < ShipChooser
+  include UserInput
+
+  def initialize
+    super
+    @flags = define_cli_flags
+  end
+
+  def get_choices
+  end
+end
+
+class Runner
+  include UserInput
+
+  def initialize
+    @flags = define_cli_flags
+  end
+
+  def check_for_args
+  end
+
+  def gently_correct_usage
+  end
+end
