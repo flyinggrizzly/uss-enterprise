@@ -37,7 +37,7 @@ module Blueprints
     end
   end
 
-  class OrbitalshipBlueprints < Blueprints
+  class OrbitalShipBlueprints < Blueprints
     def initialize
       shuttle =
       super
@@ -47,7 +47,7 @@ module Blueprints
     end
   end
 
-  class StarshipShipBlueprints < Blueprints
+  class StarShipBlueprints < Blueprints
     def initialize
       super
       @blueprints = {
