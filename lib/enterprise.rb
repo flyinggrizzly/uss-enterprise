@@ -32,11 +32,13 @@ class ShipChooser
   end
 end
 
+#Testing
 #
 # needs_ship = ShipChooser.new
 # needs_ship.choose_ship_group
 # needs_ship.choose_ship_class
 # needs_ship.commission_construction
+
 
 class InteractivePrompt < ShipChooser
   include UserInput

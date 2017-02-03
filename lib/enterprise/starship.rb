@@ -5,8 +5,17 @@ class Ship
 
   attr_reader :available_blueprints
 
-  def initialize
-    @available_blueprints = Blueprints.new.gimme
+  def initialize(type = nil)
+    case type
+    when nil
+      @available_blueprints = Blueprints.new.gimme
+    when 'SeaShip'
+      @available_blueprints = SeaShipBlueprints.new.gimme
+    when 'OrbitalShip'
+      @available_blueprints = OrbitalShipBlueprints.new.gimme
+    when 'StarShip'
+      @available_blueprints = StarShipBlueprints.new.gimme
+    end
   end
 
   def get_ship_blueprint(type)
@@ -22,18 +31,18 @@ class SeaShip < Ship
 
   ## TODO: This... there has to be a better way to go super without overwriting what I need. Problem is, I need to run line 1 here, then line 2 in super... what about `yield`?
   def initialize
-    @available_blueprints = SeaShipBlueprints.new.gimme
+    super('SeaShip')
   end
 end
 
 class OrbitalShip < Ship
   def initialize
-    @available_blueprints = OrbitalShipBlueprints.new.gimme
+    super('OrbitalShip')
   end
 end
 
 class StarShip < Ship
   def initialize
-    @available_blueprints = StarShipBlueprints.new.gimme
+    super('StarShip')
   end
 end
