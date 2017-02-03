@@ -1,6 +1,6 @@
 require_relative 'blueprints.rb'
 
-class Ship
+class ShipBuilder
   include Blueprints
 
   attr_reader :available_blueprints
@@ -18,7 +18,7 @@ class Ship
     end
   end
 
-  def get_ship_blueprint(type)
+  def define_blueprint(type)
     @blueprint = @available_blueprints[type]
   end
 
@@ -27,7 +27,7 @@ class Ship
   end
 end
 
-class SeaShip < Ship
+class SeaShipBuilder < ShipBuilder
 
   ## TODO: This... there has to be a better way to go super without overwriting what I need. Problem is, I need to run line 1 here, then line 2 in super... what about `yield`?
   def initialize
@@ -35,13 +35,13 @@ class SeaShip < Ship
   end
 end
 
-class OrbitalShip < Ship
+class OrbitalShipBuilder < ShipBuilder
   def initialize
     super('OrbitalShip')
   end
 end
 
-class StarShip < Ship
+class StarShipBuilder < ShipBuilder
   def initialize
     super('StarShip')
   end

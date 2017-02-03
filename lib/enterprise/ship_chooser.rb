@@ -3,43 +3,33 @@ require './enterprise/ships.rb'
 class ShipChooser
   def initialize
     @ship_group_options = {
-      'StarShip'    => StarShip.new,
-      'SeaShip'     => SeaShip.new,
-      'OrbitalShip' => OrbitalShip.new
+      'StarShip'    => StarShipBuilder.new,
+      'SeaShip'     => SeaShipBuilder.new,
+      'OrbitalShip' => OrbitalShipBuilder.new
     }
   end
-end
 
-class RandomShipChooser < ShipChooser
+  def choose_ship_group(request)
+    if request == 'random'
+      group = @ship_group_options.keys.sample
+    else
+      group = request
+    end
 
-  def initialize
-    super
+    @ship_builder = @ship_group_options[group]
   end
 
-  def choose_ship_group
-    random = Random.new.rand(@ship_group_options.keys.length)
-    key = @ship_group_options.keys[random]
-    @ship_group = @ship_group_options[key]
-  end
-
-  def choose_ship_class
-    ship_class_options = @ship_group.available_blueprints.keys
-
-    num_options = ship_class_options.length
-
-    @ship_class = ship_class_options[Random.new.rand(num_options)]
+  def choose_ship_class(request)
+    if request == 'random'
+      # chooses a random key from the available blueprints
+      @ship_class = @ship_builder.available_blueprints.keys.sample
+    else
+      @ship_class = request
+    end
   end
 
   def commission_construction
-    @ship_group.get_ship_blueprint(@ship_class)
-    @ship_group.build_it
+    @ship_builder.define_blueprint(@ship_class)
+    @ship_builder.build_it
   end
-end
-
-class PromptedShipChooser < ShipChooser
-
-  def initialize
-    super
-  end
-
 end

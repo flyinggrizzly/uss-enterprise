@@ -13,6 +13,7 @@ module Blueprints
       #   'Sloop'                 => @schematics.sloop,
       #   'Carrier'               => @schematics.carrier,
       #   'Spaceshuttle'          => @schematics.spaceshuttle,
+      #   'NX'                    => @schematics.ss_nx,
       #   'Constitution'          => @schematics.ss_constitution,
       #   'Constitution - refit'  => @schematics.ss_const_refit,
       #   'Excelsior'             => @schematics.ss_excelsior,
@@ -51,6 +52,7 @@ module Blueprints
     def initialize
       super
       @blueprints = {
+        'NX'                    => @schematics.ss_nx,
         'Constitution'          => @schematics.ss_constitution,
         'Constitution - refit'  => @schematics.ss_const_refit,
         'Excelsior'             => @schematics.ss_excelsior,

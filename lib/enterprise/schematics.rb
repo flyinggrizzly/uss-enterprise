@@ -1,7 +1,7 @@
 module ShipSchematics
 
   class Schematics
-    attr_accessor :sloop, :carrier, :spaceshuttle, :ss_constitution, :ss_const_refit, :ss_excelsior, :ss_ambassador, :ss_galaxy, :ss_sovereign
+    attr_reader :sloop, :carrier, :spaceshuttle, :ss_nx, :ss_constitution, :ss_const_refit, :ss_excelsior, :ss_ambassador, :ss_galaxy, :ss_sovereign
 
     def initialize
       @sloop = """
@@ -59,7 +59,17 @@ __   __   __  \\_____/            ^---------^
   -------         -------
    (~~~)           (~~~)
   """
-
+      @ss_nx = <<HEREDOC
+                          ___
+      ,.-"---------''''''''''''''| : `.                       __
+       \() (===== ====== ======) |-+-- )                __.--'--`.___
+        `.---------..............|_:_.'     ___...---'''____.....----:::--.._
+                       `.  + \\        __o./   __..--'''      """            ''-.
+                         `._+_\\_..--'' -----='----+-------------------------+---`--.
+                         <___ `______________|_____\__'''''''""'''''''';...----'''''`
+                             ""                    `" '--.__ __ __.--''
+                                                             `--'
+HEREDOC
       @ss_constitution = """
                                        _  ___________________________=====____
                 __--__                / ||     =<==== NCC-1701 =======       /
