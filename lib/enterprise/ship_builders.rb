@@ -1,4 +1,4 @@
-require_relative 'blueprints.rb'
+require_relative 'blueprint.rb'
 
 class ShipBuilder
   include Blueprints

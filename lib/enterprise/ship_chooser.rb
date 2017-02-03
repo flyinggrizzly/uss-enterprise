@@ -1,4 +1,4 @@
-require './enterprise/ships.rb'
+require_relative 'ship_builders.rb'
 
 class ShipChooser
   def initialize

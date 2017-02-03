@@ -1,5 +1,5 @@
-require './enterprise/interactions.rb'
-require './enterprise/ship_chooser.rb'
+require_relative 'enterprise/interactions.rb'
+require_relative 'enterprise/ship_chooser.rb'
 
 
 class Runner
