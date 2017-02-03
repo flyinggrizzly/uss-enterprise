@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.email              = ["sn@grz.li"]
   spec.summary            = %q{Outputs ASCII art of different Enterprises}
   spec.description        = spec.summary
-  spec.homepage           = "https://flyinggrizzly.io"
+  spec.homepage           = "https://github.com/flyinggrizzly/enterprise"
   spec.license            = "MIT"
 
   spec.files              = ['lib/enterprise.rb', 'lib/enterprise/*.rb']
