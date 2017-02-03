@@ -7,8 +7,8 @@ module Blueprints
 
     def initialize
       @schematics = Schematics.new
-      # I should change this... but I don't know what it should change to.
       @blueprints = Hash.new
+      # Haven't decided if the parent object should have *all* the schematics, or none...
       # @blueprints = {
       #   'Sloop'                 => @schematics.sloop,
       #   'Carrier'               => @schematics.carrier,
