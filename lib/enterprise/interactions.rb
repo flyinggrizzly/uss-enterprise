@@ -17,4 +17,9 @@ module UserInput
     }
     @flags
   end
+
+  def print_options(options)
+    # handle arrays and hashes as input
+    # call .each_with_index and output the options
+  end
 end
