@@ -81,4 +81,13 @@ module UserInput
     # handle arrays and hashes as input
     # call .each_with_index and output the options
   end
+
+  def l_flag
+    index_of_requested_letter = @params.find_index('-l') + 1
+    ship_letter = @params[index_of_requested_letter]
+    ship_class = look_up_letter_class(ship_letter)
+    ship_group = look_up_class_group(ship_class)
+    self.build_ship(ship_group, ship_class)
+  end
+
 end
