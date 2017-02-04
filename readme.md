@@ -25,16 +25,16 @@ You can also supply the `-l` flag, followed by an argument to specify a specific
 
 Acceptable arguments produce the following ships:
 
-- `rev # => U.S.S Enterprise (1775) - US Navy sloop during the American Revolution`
-- `cvn # => U.S.S. Enterprise CVN-65 - Nimitz class aircraft carrier`
-- `ov # => Enterprise O.V.-101 - Test unit spaceshuttle`
-- `nx # => Enterprise NX-01`
+- `rev  # => U.S.S Enterprise (1775) - US Navy sloop during the American Revolution`
+- `cvn  # => U.S.S. Enterprise CVN-65 - Nimitz class aircraft carrier`
+- `ov   # => Enterprise O.V.-101 - Test unit spaceshuttle`
+- `nx   # => Enterprise NX-01`
 - `none # => Enterprise NCC-1701`
-- `a # => Enterprise NCC-1701-A`
-- `b # => Enterprise NCC-1701-B`
-- `c # => Enterprise NCC-1701-C`
-- `d # => Enterprise NCC-1701-D`
-- `e # => Enterprise NCC-1701-E`
+- `a    # => Enterprise NCC-1701-A`
+- `b    # => Enterprise NCC-1701-B`
+- `c    # => Enterprise NCC-1701-C`
+- `d    # => Enterprise NCC-1701-D`
+- `e    # => Enterprise NCC-1701-E`
 
 *It doesn't handle bad arguments well yet.*
 
