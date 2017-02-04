@@ -3,3 +3,6 @@
 #this still isn't working. Need to fix the executable.
 
 require 'uss-enterprise'
+
+runner = Runner.new(ARGV)
+runner.handle_args

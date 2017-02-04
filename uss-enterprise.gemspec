@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name               = "uss-enterprise"
-  spec.version            = '0.0.2.3'
+  spec.version            = '0.0.2.5'
   spec.date               = '2017-02-03'
   spec.authors            = ["Sean DMR"]
   spec.email              = ["sn@grz.li"]

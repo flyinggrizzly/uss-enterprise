@@ -1,5 +1,5 @@
-require_relative 'enterprise/interactions.rb'
-require_relative 'enterprise/ship_chooser.rb'
+require_relative 'uss-enterprise/interactions.rb'
+require_relative 'uss-enterprise/ship_chooser.rb'
 
 
 class Runner
@@ -33,9 +33,3 @@ class Runner
     puts "uh oh"
   end
 end
-
-# runner = Runner.new(ARGV)
-# runner.check_for_args
-
-make = Runner.new(ARGV)
-make.handle_args
