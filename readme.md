@@ -2,12 +2,13 @@
 
 *These are the voyages...*
 
+```
  ________________        _
  \__(=======/_=_/____.--'-`--.___
            \ \   `,--,-.___.----'
          .--`\\--'../
         '---._____.|]
-
+```
 
 
 This gem exposes an executable on the commandline that outputs ASCII art of a ship that bore the name "U.S.S. Enterprise".
