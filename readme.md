@@ -36,7 +36,7 @@ Acceptable arguments produce the following ships:
 - `d    # => Enterprise NCC-1701-D`
 - `e    # => Enterprise NCC-1701-E`
 
-*It doesn't handle bad arguments well yet.*
+Incorrect parameters cause it to supply usage instructions.
 
 ## Recommended usage
 

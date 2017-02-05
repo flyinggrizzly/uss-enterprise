@@ -20,16 +20,26 @@ class Runner
   end
 
   def handle_args
-    if @params.length == 0
-      self.build_ship('random', 'random')
-    elsif @params.include? '-l'
-      self.l_flag
-    else
+    begin
+      if @params.length == 0
+        self.build_ship('random', 'random')
+      elsif @params.include? '-l'
+        self.l_flag
+      else
+        self.gently_correct_usage
+      end
+    rescue
       self.gently_correct_usage
     end
   end
 
   def gently_correct_usage
-    puts "uh oh"
+    puts "For a random Enterprise, supply no arguments or flags. If you want to specify a ship, use the '-l' flag followed by one of the following arguments:\n\n"
+    @letter_to_class.each do |arg, output|
+      puts "\t#{arg} \t=> \t#{output}"
+    end
   end
 end
+
+runner = Runner.new(ARGV)
+runner.handle_args

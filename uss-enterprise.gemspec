@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name               = "uss-enterprise"
-  spec.version            = '0.0.2.6'
-  spec.date               = '2017-02-03'
+  spec.version            = '0.0.3'
+  spec.date               = '2017-02-05'
   spec.authors            = ["Sean DMR"]
   spec.email              = ["sn@grz.li"]
   spec.summary            = %q{Outputs ASCII art of different Enterprises}
