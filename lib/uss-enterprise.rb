@@ -40,6 +40,3 @@ class Runner
     end
   end
 end
-
-runner = Runner.new(ARGV)
-runner.handle_args

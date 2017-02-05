@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name               = "uss-enterprise"
-  spec.version            = '0.0.3'
+  spec.version            = '0.0.3.1'
   spec.date               = '2017-02-05'
   spec.authors            = ["Sean DMR"]
   spec.email              = ["sn@grz.li"]
@@ -11,7 +11,4 @@ Gem::Specification.new do |spec|
 
   spec.executables       << 'enterprise'
   spec.files              = Dir.glob("{bin,lib}/**/*") + %w(readme.md)
-  # spec.executables        = ['bin/shrug']
-  # spec.test_files         = ['tests/test_shrug.rb']
-  # spec.require_paths      = ["lib"]
 end
