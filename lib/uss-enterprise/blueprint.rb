@@ -58,7 +58,8 @@ module Blueprints
         'Excelsior'             => @schematics.ss_excelsior,
         'Ambassador'            => @schematics.ss_ambassador,
         'Galaxy'                => @schematics.ss_galaxy,
-        'Sovereign'             => @schematics.ss_sovereign
+        'Sovereign'             => @schematics.ss_sovereign,
+        'Intrepid'              => @schematics.ss_intrepid
       }
     end
   end
