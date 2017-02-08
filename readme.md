@@ -35,6 +35,7 @@ Acceptable arguments produce the following ships:
 - `c    # => Enterprise NCC-1701-C`
 - `d    # => Enterprise NCC-1701-D`
 - `e    # => Enterprise NCC-1701-E`
+- `voy  # => Voyager NCC-74656` 
 
 Incorrect parameters cause it to supply usage instructions.
 
