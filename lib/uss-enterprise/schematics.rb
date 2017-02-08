@@ -1,7 +1,7 @@
 module ShipSchematics
 
   class Schematics
-    attr_reader :sloop, :carrier, :spaceshuttle, :ss_nx, :ss_constitution, :ss_const_refit, :ss_excelsior, :ss_ambassador, :ss_galaxy, :ss_sovereign
+    attr_reader :sloop, :carrier, :spaceshuttle, :ss_nx, :ss_constitution, :ss_const_refit, :ss_excelsior, :ss_ambassador, :ss_galaxy, :ss_sovereign, :ss_intrepid
 
     def initialize
       @sloop = """
@@ -139,6 +139,23 @@ HEREDOC
                                      `----.______,--'
 
   """
+  @ss_intrepid = <<HEREDOC
+                                                     __
+                                                _.-~`  `~-.
+                    _.--~~~---,.__          _.,;; .   -=(@'`\\
+                 .-`              ``~~~~--~~` ';;;       ____)
+              _.'            '.              ';;;;;    '`_.'
+           .-~;`               `\\           ' ';;;;;__.~`
+         .' .'          `'.     |           /  /;''
+          \\/      .---'''``)   /'-._____.--'\\  \\
+         _/|    (`        /  /`              `\\ \\__
+  ',    `/- \\   \\      __/  (_                /-\\-\\-`
+  `;'-..___)   |     `/-\\-\\-`
+   `-.       .'
+      `~~~~``
+
+Never watch Threshold.
+HEREDOC
     end
   end
 end

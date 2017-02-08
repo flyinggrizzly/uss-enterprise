@@ -21,6 +21,7 @@ module UserInput
 
   def define_class_to_group
     @class_to_group = {
+      'intrepid'             => 'StarShip',
       'sovereign'            => 'StarShip',
       'galaxy'               => 'StarShip',
       'ambassador'           => 'StarShip',
@@ -67,7 +68,8 @@ module UserInput
       'b'    => 'Excelsior',
       'c'    => 'Ambassador',
       'd'    => 'Galaxy',
-      'e'    => 'Sovereign'
+      'e'    => 'Sovereign',
+      'voy'  => 'Intrepid'
     }
     @letter_to_class
   end
