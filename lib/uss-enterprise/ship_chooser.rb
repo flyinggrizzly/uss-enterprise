@@ -1,6 +1,8 @@
 require_relative 'ship_builders.rb'
 
 class ShipChooser
+  attr_reader :ship_group_options, :ship_builder, :ship_class
+
   def initialize
     @ship_group_options = {
       'StarShip'    => StarShipBuilder.new,
