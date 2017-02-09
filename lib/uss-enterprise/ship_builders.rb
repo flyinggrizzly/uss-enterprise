@@ -3,7 +3,7 @@ require_relative 'blueprint.rb'
 class ShipBuilder
   include Blueprints
 
-  attr_reader :available_blueprints
+  attr_reader :available_blueprints, :blueprint
 
   def initialize(type = nil)
     case type

@@ -11,4 +11,6 @@ Gem::Specification.new do |spec|
 
   spec.executables       << 'enterprise'
   spec.files              = Dir.glob("{bin,lib}/**/*") + %w(readme.md)
+  spec.test_files         = ['tests/test_blueprint.rb', 'tests/test_ship_builders.rb']
+  spec.require_paths      = ['lib']
 end
