@@ -35,13 +35,19 @@ Acceptable arguments produce the following ships:
 - `c    # => Enterprise NCC-1701-C`
 - `d    # => Enterprise NCC-1701-D`
 - `e    # => Enterprise NCC-1701-E`
-- `voy  # => Voyager NCC-74656` 
+- `voy  # => Voyager NCC-74656`
 
 Incorrect parameters cause it to supply usage instructions.
 
 ## Recommended usage
 
 Append `enterprise [-l] [arg]` to your `.bash_profile` or `.zshrc` or whatever so you are greeted with an awesome ship every time you load the terminal.
+
+## Test coverage
+
+Isn't perfect. The major stuff that happens behind the scenes has tests to cover it, but the more transparent methods and classes (i.e. the ones that handle/parse the arguments) don't.
+
+Should probably do a major refactor and reorganization of the way the thing works instead of trying to write tests to cover this, because it won't be easy and the control flow could probably be simplified anyways.
 
 
 ### Sources for ASCII art
