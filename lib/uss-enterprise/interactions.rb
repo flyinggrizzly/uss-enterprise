@@ -1,13 +1,32 @@
+require_relative 'ship_options.rb'
+
 # Module for capturing and parsing user input
 module UserInput
+  include ShipOptions
 
   def prompt
-    print "> "
-    response = $stdin.gets.chomp
-    return response
+    print '> '
+    $stdin.gets.chomp
   end
 
   def define_cli_flags
+    @l_flags, @c_flags, @t_flags = ShipOptions.extract_cli_flags
+  end
+
+  def add_ship_to_flag_array(array, ship)
+    begin
+      if array.class == Array
+        updated_array = array << ship
+      elsif array.class == Hash
+        updated_array << array, s
+
+      return updated_array
+    rescue e
+      puts e.message
+    end
+  end
+
+  def define_cli_flags_old
     @flags = {
       '-c' => "ship class",
       '-g' => "ship group (starship, seaship, orbitalship)",
