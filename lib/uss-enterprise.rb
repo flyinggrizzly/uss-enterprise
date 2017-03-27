@@ -19,6 +19,7 @@ class Runner
     ship.commission_construction
   end
 
+  # parses and handles CLI arguments
   def handle_args
     begin
       if @params.length == 0
@@ -31,6 +32,7 @@ class Runner
     rescue
       self.gently_correct_usage
     end
+    # TODO: handle class, captain, or ship name argument flags
   end
 
   def gently_correct_usage

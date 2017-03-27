@@ -1,3 +1,4 @@
+# Module for capturing and parsing user input
 module UserInput
 
   def prompt

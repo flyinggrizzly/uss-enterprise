@@ -23,7 +23,7 @@ class TestShipChooser < Test::Unit::TestCase
       assert_equal(builder.available_blueprints, @chooser.choose_ship_group(group).available_blueprints)
     end
 
-    # assert_include(requests.values, @chooser.choose_ship_group('random'))
+    # TODO: assert_include(requests.values, @chooser.choose_ship_group('random'))
   end
 
   def test_choose_ship_class

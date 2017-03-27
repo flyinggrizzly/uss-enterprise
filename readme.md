@@ -3,11 +3,11 @@
 *These are the voyages...*
 
 ```
---------------------------     ________________        _
------------------------------  \__(=======/_=_/____.--'-`--.___
----------------------------              \ \   `,--,-.___.----'
------------------------                .--`\\--'../
--------------------                   '---._____.|]
+---------------     ________________        _
+------------------  \__(=======/_=_/____.--'-`--.___
+----------------              \ \   `,--,-.___.----'
+------------                .--`\\--'../
+--------                   '---._____.|]
 ```
 
 
@@ -19,7 +19,7 @@ This gem exposes an executable on the commandline that outputs ASCII art of a sh
 
 ## Usage
 
-`$ enterprise` outputs a random Enterprise.
+`$ enterprise #=> outputs a random Enterprise.`
 
 You can also supply the `-l` flag, followed by an argument to specify a specific enterprise.
 
@@ -48,6 +48,44 @@ Append `enterprise [-l] [arg]` to your `.bash_profile` or `.zshrc` or whatever s
 Isn't perfect. The major stuff that happens behind the scenes has tests to cover it, but the more transparent methods and classes (i.e. the ones that handle/parse the arguments) don't.
 
 Should probably do a major refactor and reorganization of the way the thing works instead of trying to write tests to cover this, because it won't be easy and the control flow could probably be simplified anyways.
+
+---
+
+## TODO
+
+First, a major refactor. The control flow in here is kinda nuts. Good lesson that designing before building is important.
+
+That needs to come first, because I want to stick this guy into a silly Rails app that will just give you different Enterprises in a webpage.
+
+### Refactor priorities
+
+- the `ShipBuilder` and `ShipChooser` classes should be combined into a `Ship` class, with methods for defining group, class, blueprint, and finally building.
+- pull all ship specific info into a `Ships` module, so that updating the gem with new ships later on is simple.
+
+```ruby
+class Ship
+  include Ships # module defining types, classes, and blueprints
+
+  def define_type # replaces ship group, which is less than clear
+    # Am I a seaship, orbitalship, or starship?
+  end
+
+  def define_class
+    # Am I a sloop or a carrier (or whatever is appropriate for my type)
+  end
+
+  def draw_blueprint
+    # What do I look like?
+    # returns a blueprint string
+  end
+
+  def construct
+    # puts blueprint string, this is an optional step, because the draw_blueprint method can also hand the blueprint to other calls (say, a Rails app that wants to insert it into some HTML <pre> tags)
+  end
+end
+```
+
+---
 
 
 ### Sources for ASCII art
